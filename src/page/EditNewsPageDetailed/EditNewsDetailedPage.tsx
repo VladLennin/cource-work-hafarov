@@ -7,6 +7,7 @@ import css from "./EditNewsDetailedPage.module.css"
 import {RouterNames} from "../../router/RouterNames";
 import Title from "../../component/Title/Title";
 import Skeleton from "../../component/Skeleton/Skeleton";
+import Dialog from "../../component/Dialog/Dialog";
 
 const EditNewsDetailedPage = () => {
 
@@ -14,7 +15,20 @@ const EditNewsDetailedPage = () => {
     const [isLoading, setIsLoading] = useState<boolean>(true)
     const [showToast, setShowToast] = useState(false);
     const [news, setNews] = useState<News>({} as News)
+    const [showDialog, setShowDialog] = useState(false);
+
     const navigate = useNavigate()
+
+    const handleCancel = () => {
+        setShowDialog(false);
+    };
+
+    const handleDelete = () => {
+        $api.delete(`/news/${news.id}`).then(() => {
+            setShowDialog(false);
+            navigate(RouterNames.EDIT_NEWS)
+        })
+    };
     const getNews = () => {
         $api.get(`/news/${id}`).then(res => {
             setNews(res.data)
@@ -157,6 +171,9 @@ const EditNewsDetailedPage = () => {
                         </div>
                         <div className={css.createBtnContainer}>
                             <button type={"submit"} className={css.createBtn}>Змінити</button>
+                            <button type={"button"} onClick={() => setShowDialog(true)}
+                                    className={css.createBtn}>Видалити
+                            </button>
                         </div>
 
                     </div>
@@ -164,6 +181,9 @@ const EditNewsDetailedPage = () => {
             </div>
             <Toast message="Новина успішно змінена" showToast={showToast}
                    handleClose={() => setShowToast(false)}/>
+            {showDialog && (
+                <Dialog onDelete={handleDelete} onCancel={handleCancel}/>
+            )}
         </form>
     );
 };
