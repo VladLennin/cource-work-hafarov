@@ -1,0 +1,26 @@
+.img {
+    height: 350px;
+    width: 500px;
+    margin: 20px;
+}
+
+.carouselContainer {
+    margin-top: 30px;
+}
+
+.contentContainer {
+    margin: 20px;
+    padding: 20px;
+    background: #cecece;
+    border-radius: 5px;
+}
+
+.contentContainer > * {
+    margin-top: 5px;
+    text-align: center;
+}
+
+.date{
+    padding: 10px 10px 0 0 ;
+    text-align: end;
+}

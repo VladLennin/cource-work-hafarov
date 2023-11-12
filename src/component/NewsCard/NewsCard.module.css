@@ -1,21 +1,17 @@
-.img{
-    width: 400px;
-    height: 250px;
-}
+
 
 .card{
-    width: 400px;
-    height: 350px;
+    width: 350px;
     border: 1px solid #837e7e;
     display: flex;
     flex-direction: column;
     border-radius: 5px;
     padding: 10px;
     gap: 10px;
-    background: #efefef;
+    background: #333;
     cursor: pointer;
     text-decoration: none;
-    color:black;
+    color:white;
 }
 
 .card:hover{

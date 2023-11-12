@@ -14,7 +14,7 @@ const NewsCard: FC<NewsProps> = ({news}) => {
     return (
         <Link to={`${RouterNames.NEWS}/${news.id}`} className={css.card}>
             <div className={css.date}>{formatDate(news.date)}</div>
-            <ImageComponent className={css.img} src={news.images[0]}/>
+            <ImageComponent src={news.images[0]}/>
             <div className={css.title}>{news.title}</div>
         </Link>
     );

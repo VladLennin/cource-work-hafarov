@@ -1,0 +1,44 @@
+.logoContainer {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.title {
+    font-size: 16px;
+    font-weight: 500;
+    color:white;
+}
+
+.logo {
+    width: 75px;
+    height: 75px;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    z-index: 100;
+    background: #333;
+}
+
+.linksContainer {
+    display: flex;
+    padding: 0 40px;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.linksContainer > a {
+    padding: 10px 20px;
+    text-decoration: none;
+    color: black;
+    background: #f5f0f0;
+}
+
+.linksContainer > a:hover {
+    transition-duration: 300ms;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.5);
+}
