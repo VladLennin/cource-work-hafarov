@@ -1,7 +1,8 @@
 import React, {useEffect, useState} from 'react';
-import {News} from "../model/types";
-import $api from "../http";
-
+import {News} from "../../model/types";
+import $api from "../../http";
+import NewsCard from "../../component/NewsCard/NewsCard";
+import css from "./HomePage.module.css"
 const HomePage = () => {
 
     const [news, setNews] = useState<News[]>([])
@@ -27,13 +28,12 @@ const HomePage = () => {
                 Вітаємо на порталі новин Національної Гвардії України
             </h1>
 
-            {isLoading ? <div>Loading...</div> : news.map(item => (
-                <div>
-                    {item.images.map(img => (
-                        <img src={img} alt=""/>
-                    ))}
-                </div>
-            ))}
+            <div className={css.newsContainer}>
+                {isLoading ? <div>Loading...</div> : news.map(item => (
+                    <NewsCard news={item}/>
+                ))}
+            </div>
+
         </div>
     );
 };

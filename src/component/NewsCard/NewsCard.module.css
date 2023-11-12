@@ -1,0 +1,35 @@
+.img{
+    width: 400px;
+    height: 250px;
+}
+
+.card{
+    width: 400px;
+    height: 350px;
+    border: 1px solid #837e7e;
+    display: flex;
+    flex-direction: column;
+    border-radius: 5px;
+    padding: 10px;
+    gap: 10px;
+    background: #efefef;
+    cursor: pointer;
+    text-decoration: none;
+    color:black;
+}
+
+.card:hover{
+    transition-duration: 300ms;
+    scale: 1.01;
+    box-shadow: 5px 5px 5px rgba(0,0,0,0.5);
+}
+
+.title{
+    font-weight: 600;
+    font-size:20px;
+}
+
+.date{
+    font-weight: 300;
+    font-size: 14px;
+}

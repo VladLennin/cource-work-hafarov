@@ -1,0 +1,32 @@
+/* Skeleton.css */
+
+@keyframes narrow {
+    0% {
+        width: 100px;
+        height: 100px;
+    }
+    50% {
+        width: 50px;
+        height: 50px;
+    }
+    100% {
+        width: 100px;
+        height: 100px;
+    }
+}
+
+.skeletonContainer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    width: 100%;
+}
+
+.narrowingCircle {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background-color: #ddd;
+    animation: narrow 2s infinite;
+}

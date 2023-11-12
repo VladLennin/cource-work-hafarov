@@ -1,3 +1,4 @@
 export enum RouterNames{
-    HOME = "/"
+    HOME = "/",
+    NEWS = "/news",
 }
