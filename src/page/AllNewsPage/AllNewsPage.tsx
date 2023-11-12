@@ -29,7 +29,7 @@ const AllNewsPage = () => {
             <Title value={"Новини 🇺🇦"}/>
             <div className={css.newsContainer}>
                 {
-                    isLoading ? <Skeleton/> : news.map(item => (
+                    isLoading ? <Skeleton/> : news.reverse().map(item => (
                         <NewsCard news={item}/>
                     ))
                 }

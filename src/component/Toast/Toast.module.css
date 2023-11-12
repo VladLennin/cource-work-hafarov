@@ -1,0 +1,36 @@
+.toast {
+    position: fixed;
+    top:20px;
+    right: 10px;
+    transform: translateX(-50%);
+    background-color: #333;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+    display: none;
+}
+
+.toast.show {
+    opacity: 1;
+    display: block;
+}
+
+.toast.hide {
+    opacity: 0;
+    display: none;
+}
+
+.toast p {
+    margin: 0;
+}
+
+.toast button {
+    background-color: transparent;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: 5px 10px;
+    margin-left: 10px;
+}

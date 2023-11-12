@@ -1,0 +1,21 @@
+
+.newsContainer {
+    margin: 50px 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 50px;
+}
+
+.deleteBtn {
+    color: #cc2d2d;
+    border: none;
+    background: none;
+    cursor:pointer;
+}
+
+.deleteBtnContainer{
+    display: flex;
+    justify-content: end;
+}
+

@@ -6,6 +6,7 @@ import NewsDetailedPage from "../page/NewsDetailedPage/NewsDetailedPage";
 import AddNewsPage from "../page/AddNewsPage/AddNewsPage";
 import EditNewsPage from "../page/EditNewsPage/EditNewsPage";
 import AllNewsPage from "../page/AllNewsPage/AllNewsPage";
+import EditNewsDetailedPage from "../page/EditNewsPageDetailed/EditNewsDetailedPage";
 
 const AppRouter = () => {
     return (
@@ -14,6 +15,7 @@ const AppRouter = () => {
             <Route path={RouterNames.NEWS} element={<AllNewsPage/>}/>
             <Route path={RouterNames.ADD_NEWS} element={<AddNewsPage/>}/>
             <Route path={RouterNames.EDIT_NEWS} element={<EditNewsPage/>}/>
+            <Route path={RouterNames.EDIT_NEWS + "/:id"} element={<EditNewsDetailedPage/>}/>
             <Route path={RouterNames.NEWS + "/:id"} element={<NewsDetailedPage/>}/>
             <Route path={"*"} element={<HomePage/>}/>
         </Routes>

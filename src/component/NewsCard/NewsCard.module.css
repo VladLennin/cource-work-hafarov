@@ -2,6 +2,7 @@
 
 .card{
     width: 350px;
+    min-height: 300px;
     border: 1px solid #837e7e;
     display: flex;
     flex-direction: column;

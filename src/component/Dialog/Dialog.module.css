@@ -1,0 +1,30 @@
+
+.dialog {
+    border: 1px solid #ccc;
+    padding: 20px;
+    background: #fff;
+    width: 300px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.dialog p {
+    margin: 0 0 15px;
+}
+
+.dialog button {
+    margin-right: 10px;
+    padding: 8px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+}
+
+.dialog button:hover {
+    background: #f2f2f2;
+}
