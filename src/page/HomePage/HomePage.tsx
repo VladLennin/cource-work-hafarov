@@ -23,6 +23,7 @@ const HomePage = () => {
     const getNews = () => {
         $api.get<News[]>("/news").then(res => {
             setNews(res.data)
+            console.log(res.data)
         }).then(() => {
             setIsLoading(false)
         }).catch(e => {
@@ -37,23 +38,25 @@ const HomePage = () => {
     return (
         <div>
             <Title value={" Вітаємо на порталі новин Національної Гвардії України 🪖"}/>
-
-            <Carousel responsive={responsive}>
-                {news.slice(0, 10).map(item => (
-                    <div style={{margin: "0 20px"}}>
-                        <ImageComponent src={item.images[0]}/>
-                    </div>
-                ))}
-            </Carousel>
-
-            <div className={css.section}>
-                <span className={css.subtitle}>Останні новини</span>
-                <div className={css.newsContainer}>
-                    {isLoading ? <div>Loading...</div> : news.slice(0,6).map(item => (
-                        <NewsCard news={item}/>
+            {isLoading ? <div>Loading...</div> : <>
+                <Carousel responsive={responsive}>
+                    {news.slice(0, 10).map(item => (
+                        <div style={{margin: "0 20px"}}>
+                            <ImageComponent src={item.images[0]}/>
+                        </div>
                     ))}
+                </Carousel>
+
+                <div className={css.section}>
+                    <span className={css.subtitle}>Останні новини</span>
+                    <div className={css.newsContainer}>
+                        {news.slice(0, 6).map(item => (
+                            <NewsCard news={item}/>
+                        ))}
+                    </div>
                 </div>
-            </div>
+            </>
+            }
         </div>
     );
 };

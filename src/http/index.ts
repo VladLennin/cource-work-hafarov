@@ -1,5 +1,5 @@
 import axios from 'axios'
-export const API_URL =  "http://localhost:8080"
+export const API_URL =  "http://46.219.127.6:10111"
 console.log(API_URL)
 
 const $api = axios.create({
